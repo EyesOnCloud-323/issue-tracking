@@ -4,4 +4,4 @@ def total(prices):
     return sum(prices)
 
 def apply_discount(total_price, percent):
-    return total_price - percent / 100
+    return total_price * (1 - percent / 100)

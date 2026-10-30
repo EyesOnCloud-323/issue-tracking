@@ -1,8 +1,11 @@
 import unittest
 
-from shop import apply_discount, total
+from shop import add_tax, apply_discount, total
 
 class TestShop(unittest.TestCase):
+    def test_add_tax(self):
+        self.assertEqual(add_tax(100, 18), 118.0)
+
     def test_total(self):
         self.assertEqual(total([10, 20, 30]), 60)
 
@@ -11,3 +14,4 @@ class TestShop(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
